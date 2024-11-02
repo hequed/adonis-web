@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+/* font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; 
+*/
+
+:root {
+    --text-color: #F5F3F4;
+    --text-enfasis: #ff0000;
+    --bg-dark-color: #0B090A;
+    --bg-grey-color: #161A1D;
+    --bg-light-color: #B1A7A6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Onest", sans-serif;
+}
+
+body {
+    display: grid;
+    /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
+    min-height: 100dvh;
+    /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
+    grid-template-rows: auto 1fr auto;
+    /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
+
+    color: var(--text-color);
+    background-image: url(./media/sylvanas-bg-aboutus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--bg-dark-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+        padding: 20px;
+        text-align: center;
+
+        background-image: url(./media/abstractworld-min.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: luminosity;
+        background-color: var(--bg-grey-color);
+        /* border: thin solid yellow; */
+
+        p {
+            width: 400px;
+            padding: 20px;
+
+            font-size: 1em;
+            font-weight: 500;
+            font-family: -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                "Helvetica Neue",
+                Arial,
+                "Noto Sans",
+                sans-serif,
+                "Apple Color Emoji",
+                "Segoe UI Emoji",
+                "Segoe UI Symbol",
+                "Noto Color Emoji";
+
+            background: #ff00000c;
+            background-image: url(./media/az-logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+            background-color: #cd000050;
+
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            color: var(--text-color);
+        }
+    }
+
+    .navbar {
+        background-color: black;
+        margin-top: 40px;
+        padding: 18px;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        /* border: thin solid red; */
+
+        background: #ff00000c;
+        background-image: url(./media/az-logo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: lighten;
+        background-color: #cd000050;
+
+        a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: "Cinzel", serif;
+            padding: 0px 20px 0px;
+            color: var(--text-color);
+        }
+    }
+}
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    /* background-image: url(/media/lobitocc.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-color: var(--bg-dark-color); */
+
+    .grilla {
+        display: grid;
+        padding: 90px;
+        gap: 15px;
+        grid:
+            "hero hero" 1fr "panel-registro panel-filosofia" 1fr / 1fr 1fr;
+        /* border: thin solid yellow; */
+    }
+
+    .hero {
+        grid-area: hero;
+        padding: 40px;
+        background: rgba(248, 5, 5, 0.253);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.445);
+
+        background-image: url(./media/sylvanas.jfif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+
+        .gossip {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            gap: 14px;
+
+            a {
+                color: #00ff62;
+                border: 1px solid #00ff6221;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 12px;
+            }
+
+            a:hover {
+                color: var(--bg-dark-color);
+                background-color: #00ff62;
+                transition: background-color 0.9s;
+            }
+        }
+
+        p {
+            width: 930px;
+        }
+    }
+
+    .panel-registro {
+        grid-area: panel-registro;
+        padding: 40px;
+        border-radius: 20px;
+
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-image: url(./media/silvanas-2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 50%;
+            visibility: hidden;
+        }
+
+        h2 {
+            font-family: "Cinzel", serif;
+            margin-bottom: 10px;
+        }
+    }
+
+    .panel-filosofia {
+        grid-area: panel-filosofia;
+        border: thin solid yellow;
+        padding: 40px;
+        border-radius: 20px;
+
+        background-image: url(./media/arthas.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: luminosity;
+        background-color: var(--text-enfasis);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        h2 {
+            font-family: "Cinzel", serif;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.divisor-mid-page {
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+
+    background: #ff00000c;
+    background-image: url(./media/az-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-color: #cd000050;
+
+    a {
+        color: var(--text-color);
+    }
+}
+
+.about-us {
+    background-image: url(./media/garrosh.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-color: var(--bg-dark-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: thin solid magenta; */
+
+    .redes-sociales {
+        margin-top: 10px;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+
+        i {
+            font-size: 65px;
+            color: #00ff62;
+            text-shadow: rgb(255, 255, 255) 1px 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        i:hover {
+            scale: 1.2;
+            transform: scale(1.1);
+        }
+
+        .link-tr {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border: thin solid rgb(0, 0, 0);
+            background-color: #ff000091;
+            margin-top: 15px;
+            border-radius: 10px;
+
+            a {
+                font-weight: 500;
+                margin-top: 5px;
+                padding: 10px;
+                color: rgb(255, 255, 255);
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: #00ff62;
+            }
+        }
+    }
+
+.discord {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000000b0;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 700px;
+
+    i {
+        font-size: 70px;
+        color: #7289da;
+    }
+
+    a {
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: linear-gradient(rgba(104, 0, 0, 0.774), red);
+        font-weight: 600;
+        padding: 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 12px -10px black;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), red);
+        /*Cambiaelgradientealpasarelratón*/
+        color: #ffffff;
+    }
+}
+
+img {
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-family: "Cinzel", serif;
+}
+
+footer {
+    background-color: var(--bg-grey-color);
+    /* border: thin solid palegreen; */
+}
+}
